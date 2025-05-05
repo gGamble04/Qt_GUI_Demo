@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Qt UI Compiler cache
+*.qrc
+*.ui~
+
+# Virtual environment
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.spec
+
+# VSCode settings 
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db

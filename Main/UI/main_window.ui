@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mw_Main</class>
+ <widget class="QMainWindow" name="mw_Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Sample Application</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Icons/Icons.qrc">
+    <normaloff>:/Main/dollar.png</normaloff>:/Main/dollar.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>543</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFIle">
+    <property name="title">
+     <string>FIle</string>
+    </property>
+    <addaction name="action_quit"/>
+   </widget>
+   <widget class="QMenu" name="menuPerson">
+    <property name="title">
+     <string>Person</string>
+    </property>
+    <addaction name="action_addPerson"/>
+   </widget>
+   <addaction name="menuFIle"/>
+   <addaction name="menuPerson"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_quit">
+   <property name="icon">
+    <iconset resource="../../Icons/Icons.qrc">
+     <normaloff>:/Buttons/cross.png</normaloff>:/Buttons/cross.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_addPerson">
+   <property name="text">
+    <string>Add Person</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../Icons/Icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
