@@ -22,7 +22,43 @@
    <iconset resource="../../Icons/Icons.qrc">
     <normaloff>:/Main/dollar.png</normaloff>:/Main/dollar.png</iconset>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>60</y>
+         <width>343</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+ color: rgb(0, 170, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>Welcome to the Sample Qt App!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -43,6 +79,7 @@
      <string>Person</string>
     </property>
     <addaction name="action_addPerson"/>
+    <addaction name="action_viewPeople"/>
    </widget>
    <addaction name="menuFIle"/>
    <addaction name="menuPerson"/>
@@ -57,14 +94,17 @@
     <string>Quit</string>
    </property>
    <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-    </font>
+    <font/>
    </property>
   </action>
   <action name="action_addPerson">
    <property name="text">
     <string>Add Person</string>
+   </property>
+  </action>
+  <action name="action_viewPeople">
+   <property name="text">
+    <string>View People</string>
    </property>
   </action>
  </widget>

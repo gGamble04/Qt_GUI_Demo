@@ -16,8 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QStatusBar, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QGroupBox, QLabel,
+    QMainWindow, QMenu, QMenuBar, QSizePolicy,
+    QStatusBar, QWidget)
 import Icons_rc
 
 class Ui_mw_Main(object):
@@ -37,12 +38,30 @@ class Ui_mw_Main(object):
         icon1.addFile(u":/Buttons/cross.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.action_quit.setIcon(icon1)
         font1 = QFont()
-        font1.setPointSize(9)
         self.action_quit.setFont(font1)
         self.action_addPerson = QAction(mw_Main)
         self.action_addPerson.setObjectName(u"action_addPerson")
+        self.action_viewPeople = QAction(mw_Main)
+        self.action_viewPeople.setObjectName(u"action_viewPeople")
         self.centralwidget = QWidget(mw_Main)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.gridLayout = QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.groupBox = QGroupBox(self.centralwidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.label = QLabel(self.groupBox)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(80, 60, 343, 32))
+        font2 = QFont()
+        font2.setPointSize(18)
+        self.label.setFont(font2)
+        self.label.setStyleSheet(u"QWidget {\n"
+" color: rgb(0, 170, 0);\n"
+"}")
+        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout.addWidget(self.groupBox, 0, 0, 1, 1)
+
         mw_Main.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(mw_Main)
         self.menubar.setObjectName(u"menubar")
@@ -60,6 +79,7 @@ class Ui_mw_Main(object):
         self.menubar.addAction(self.menuPerson.menuAction())
         self.menuFIle.addAction(self.action_quit)
         self.menuPerson.addAction(self.action_addPerson)
+        self.menuPerson.addAction(self.action_viewPeople)
 
         self.retranslateUi(mw_Main)
 
@@ -70,6 +90,9 @@ class Ui_mw_Main(object):
         mw_Main.setWindowTitle(QCoreApplication.translate("mw_Main", u"Sample Application", None))
         self.action_quit.setText(QCoreApplication.translate("mw_Main", u"Quit", None))
         self.action_addPerson.setText(QCoreApplication.translate("mw_Main", u"Add Person", None))
+        self.action_viewPeople.setText(QCoreApplication.translate("mw_Main", u"View People", None))
+        self.groupBox.setTitle("")
+        self.label.setText(QCoreApplication.translate("mw_Main", u"Welcome to the Sample Qt App!", None))
         self.menuFIle.setTitle(QCoreApplication.translate("mw_Main", u"FIle", None))
         self.menuPerson.setTitle(QCoreApplication.translate("mw_Main", u"Person", None))
     # retranslateUi

@@ -84,6 +84,26 @@ class Ui_d_Person(object):
 
         self.formLayout.setWidget(1, QFormLayout.ItemRole.LabelRole, self.label_2)
 
+        self.label_3 = QLabel(self.gb_Person)
+        self.label_3.setObjectName(u"label_3")
+
+        self.formLayout.setWidget(2, QFormLayout.ItemRole.LabelRole, self.label_3)
+
+        self.label_4 = QLabel(self.gb_Person)
+        self.label_4.setObjectName(u"label_4")
+
+        self.formLayout.setWidget(3, QFormLayout.ItemRole.LabelRole, self.label_4)
+
+        self.le_email = QLineEdit(self.gb_Person)
+        self.le_email.setObjectName(u"le_email")
+
+        self.formLayout.setWidget(2, QFormLayout.ItemRole.FieldRole, self.le_email)
+
+        self.le_phoneNumber = QLineEdit(self.gb_Person)
+        self.le_phoneNumber.setObjectName(u"le_phoneNumber")
+
+        self.formLayout.setWidget(3, QFormLayout.ItemRole.FieldRole, self.le_phoneNumber)
+
 
         self.gridLayout.addWidget(self.gb_Person, 0, 0, 1, 3)
 
@@ -108,6 +128,8 @@ class Ui_d_Person(object):
         self.gb_Person.setTitle(QCoreApplication.translate("d_Person", u"GroupBox", None))
         self.label.setText(QCoreApplication.translate("d_Person", u"First Name", None))
         self.label_2.setText(QCoreApplication.translate("d_Person", u"Last Name", None))
+        self.label_3.setText(QCoreApplication.translate("d_Person", u"Email", None))
+        self.label_4.setText(QCoreApplication.translate("d_Person", u"Phone Number", None))
         self.lb_message.setText(QCoreApplication.translate("d_Person", u"Message", None))
     # retranslateUi
 
