@@ -113,7 +113,9 @@ class Ui_d_Person(object):
         self.gridLayout.addWidget(self.lb_message, 3, 0, 1, 3)
 
         QWidget.setTabOrder(self.le_first_name, self.le_last_name)
-        QWidget.setTabOrder(self.le_last_name, self.pb_submit)
+        QWidget.setTabOrder(self.le_last_name, self.le_email)
+        QWidget.setTabOrder(self.le_email, self.le_phoneNumber)
+        QWidget.setTabOrder(self.le_phoneNumber, self.pb_submit)
         QWidget.setTabOrder(self.pb_submit, self.pb_close)
 
         self.retranslateUi(d_Person)

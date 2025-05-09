@@ -141,6 +141,8 @@
  <tabstops>
   <tabstop>le_first_name</tabstop>
   <tabstop>le_last_name</tabstop>
+  <tabstop>le_email</tabstop>
+  <tabstop>le_phoneNumber</tabstop>
   <tabstop>pb_submit</tabstop>
   <tabstop>pb_close</tabstop>
  </tabstops>

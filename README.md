@@ -13,6 +13,7 @@ This is a basic desktop application built with PySide6 and Qt Designer. It demon
 
 ![Login Window](./Icons/Qt_app_pic1.png)  
 ![Main Window](./Icons/Qt_app_pic2.png)
+![View People Window](./Icons/Qt_app_pic3.png)
 
 ---
 
@@ -75,15 +76,23 @@ python main.py
 .
 ├── Application_Login/
 │   └── Login form logic and UI
+├── Icons/
+│   └── App icons (including screenshot previews)
 ├── Main/
 │   └── Main window logic and UI
 ├── Persons/
 │   └── Add person dialog logic and UI
-├── Icons/
-│   └── App icons (including screenshot previews)
-├── main.py
+├── Sign_Up
+│   └── Sign up form logic and UI
+├── View_People
+│   └── Table view of people/data logic and UI
 ├── .gitignore
-└── README.md
+├── Icons_rc.py
+├── LICENSE
+├── Persons_Data.csv
+├── README.md
+├── requirements.txt
+└── UserID_Passwords.csv
 ```
 
 ---

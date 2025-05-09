@@ -32,6 +32,8 @@ class AddPerson(qtw.QDialog, Ui_d_Person):
         # Connects the submit button to the process_entry method
         self.pb_submit.clicked.connect(self.process_entry)
 
+        self.le_first_name.setFocus()
+
     @qtc.Slot()
     def process_entry(self):
         """Processes the entry of a new person."""
